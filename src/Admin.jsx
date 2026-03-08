@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { db, ref, set, onValue } from "./firebase";
 
 const DB_PATH = "quiz";
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "oakwood2024";
 
 const defaultData = {
   eventTitle: "Academic Quiz Championship",
@@ -35,6 +35,7 @@ function PasswordGate({ onUnlock }) {
   const [shake, setShake] = useState(false);
 
   const attempt = () => {
+    console.log("Trying:", input, "| Expected:", ADMIN_PASSWORD);
     if (input === ADMIN_PASSWORD) {
       sessionStorage.setItem("quiz_admin_auth", "1");
       onUnlock();

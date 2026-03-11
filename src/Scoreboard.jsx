@@ -6,7 +6,7 @@ const MEDALS = ["🥇", "🥈", "🥉"];
 const YEAR_GROUPS = ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"];
 
 // ── Competition Schedule ───────────────────────────────────────────────────
-const COMPETITION_DATE = "2025-03-12"; // ← update to match your event date
+const COMPETITION_DATE = "2025-03-11";
 
 const SCHEDULE = [
   { year: "Year 1", time: "09:00" },
